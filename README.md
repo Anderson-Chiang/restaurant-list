@@ -13,7 +13,7 @@
 ### 安裝與執行步驟
 開啟終端機 (Terminal)，clone 此專案至本機(Local)電腦
 ```
-$ git clone https://github.com/Anderson-Chiang/restaurant_list.git
+$ git clone https://github.com/Anderson-Chiang/restaurant-list.git
 ```
 
 進入專案資料夾
