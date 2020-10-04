@@ -18,7 +18,7 @@ $ git clone https://github.com/Anderson-Chiang/restaurant-list.git
 
 進入專案資料夾
 ```
-$ cd restaurant_list
+$ cd restaurant-list
 ```
 
 安裝 npm 套件
