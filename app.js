@@ -73,14 +73,29 @@ app.post('/restaurants/:id/edit', (req, res) => {
     .catch(error => console.log(error))
 })
 
-// app.get('/search', (req, res) => {
-//   // console.log('req.query', req.query)
-//   const keyword = req.query.keyword
-//   const restaurants = restaurantList.results.filter(restaurant => {
-//     return restaurant.name.toLocaleLowerCase().includes(keyword.toLowerCase())
-//   })
-//   res.render('index', { restaurants: restaurants, keyword: keyword })
-// })
+app.post('/restaurants/:id/delete', (req, res) => {
+  const id = req.params.id
+  return Restaurant.findById(id)
+    .then((restaurant) => restaurant.remove())
+    .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
+})
+
+app.get('/search', (req, res) => {
+  // console.log('req.query', req.query)
+  const keyword = req.query.keyword
+  Restaurant.find()
+    .lean()
+    .then((restaurants) => {
+      return restaurants.filter(restaurant => 
+        restaurant.name.toLowerCase().includes(keyword) || 
+        restaurant.name_en.toLowerCase().includes(keyword) || 
+        restaurant.category.toLowerCase().includes(keyword)
+        )
+    })
+    .then((restaurants) => res.render('index', { restaurants, keyword }))
+    .catch(error => console.log(error))
+})
 
 app.listen(port, () => {
   console.log(`The server is listening on http://localhost:${port}`)
