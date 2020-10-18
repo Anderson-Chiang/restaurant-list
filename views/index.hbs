@@ -40,7 +40,7 @@
               <div class="crud-buttons d-flex justify-content-end mt-1">
                 <a type="button" class="btn btn-outline-secondary btn-sm" href="./restaurants/{{this._id}}/edit">Edit</a>
                 <a type="button" class="btn btn-outline-info btn-sm mx-1" href="./restaurants/{{this._id}}">Details</a>
-                <form action="./restaurants/{{this._id}}/delete" method="POST" style="display: inline;" onsubmit="return confirm('確定要刪除此筆資料嗎？')">
+                <form action="./restaurants/{{this._id}}?_method=DELETE" method="POST" style="display: inline;" onsubmit="return confirm('確定要刪除此筆資料嗎？')">
                   <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
                 </form>
               </div>
