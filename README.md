@@ -1,6 +1,6 @@
 # 餐廳美食清單
 透過 Express x Mongo DB 建立的餐廳美食清單
-![](/restaurantListCRUD.png)
+![](/restaurantListRefactor.png)
 ## 功能描述
 - 使用者可以透過搜尋欄位尋找餐廳
 - 使用者可以新增一家餐廳
@@ -8,6 +8,7 @@
 - 使用者可以瀏覽全部所有餐廳
 - 使用者可以修改一家餐廳的資訊
 - 使用者可以刪除一家餐廳
+- 使用者可以設定餐廳排序
 ### 環境建置與需求
 * Node.js: v10.15.0
 * npm: 6.4.1
@@ -18,6 +19,7 @@
 * mongoDB: 4.2.10
 * mongoose: 5.10.9
 * Robo 3T: 1.4.1
+* method-override: 3.0.0
 ### 安裝與執行步驟
 開啟終端機 (Terminal)，clone 此專案至本機(Local)電腦
 ```

@@ -3,7 +3,6 @@
   <div class="search-bar-outer d-flex justify-content-between">
     <div class="search-bar-inner">
       <form action="/search">
-        {{!-- <h4 class="mb-2">尋找餐廳：</h4> --}}
         <div class="input-group">
           <input type="text" name="keyword" value="{{keyword}}" class="form-control" placeholder="輸入餐廳、分類" aria-label="Restaurant Name..."
             value="" aria-describedby="search-button">
@@ -18,7 +17,6 @@
         aria-haspopup="true" aria-expanded="false">
         Sort
       </a>
-    
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         <a class="dropdown-item" href="/sort/AtoZ">A -> Z</a>
         <a class="dropdown-item" href="/sort/ZtoA">Z -> A</a>
