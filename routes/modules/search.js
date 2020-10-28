@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
       return restaurants.filter(restaurant =>
         restaurant.name.toLowerCase().includes(keyword) ||
         restaurant.name_en.toLowerCase().includes(keyword) ||
-        restaurant.category.toLowerCase().includes(keyword)
+        restaurant.category.toLowerCase().includes(keyword) ||
+        restaurant.location.toLowerCase().includes(keyword)
       )
     })
     .then((restaurants) => res.render('index', { restaurants, keyword }))
